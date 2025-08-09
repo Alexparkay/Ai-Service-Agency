@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0c3b2e;
+  --fg: #f7f7f5;
+  --black: #000000;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-brand-green text-brand-offwhite antialiased; 
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(12, 59, 46, 0.85), rgba(12, 59, 46, 0.95)),
+    url('/textures/botanical-dark.svg');
+  background-size: 24px 24px, 36px 36px, cover, cover;
+  background-position: 0 0, 18px 18px, center, center;
+}
+
+.container-gutter {
+  @apply px-6 sm:px-8 md:px-10 lg:px-12;
+}
+
+.section {
+  @apply container-gutter max-w-7xl mx-auto py-20 md:py-28; 
+}
+
+.headline {
+  @apply font-space text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+}
+
+.subheadline {
+  @apply font-inter text-lg md:text-2xl text-brand-offwhite/80;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-full bg-brand-offwhite text-brand-black font-medium px-6 py-3 transition-colors hover:bg-white;
+}
+
+.card {
+  @apply rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-xl;
+}
+
+.divider {
+  @apply h-px bg-white/10 w-full my-8;
+}
+
+
